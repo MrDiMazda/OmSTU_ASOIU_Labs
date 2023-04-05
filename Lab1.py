@@ -17,9 +17,3 @@ def GetFilmsNames(soup):
         toplist.append({"Title":movie,"Rating":rating})
     
     return toplist
-
-if __name__=="__main__":
-    url = "https://www.imdb.com/chart/top/?ref_=nv_mp_mv250"
-    parsedPage = GetParsedPage(url)
-    topList = GetFilmsNames(parsedPage)
-    print(topList)
