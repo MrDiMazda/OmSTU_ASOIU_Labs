@@ -77,8 +77,3 @@ async def send_welcome(message: aiogram.types.Message): #   Информация
         else: await MainMenu(message)
         file.close()
     except FileNotFoundError: await CreateTemplate(message)
-
-
-
-if __name__ == "__main__":
-    aiogram.executor.start_polling(dp, skip_updates=True)
