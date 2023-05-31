@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор сложного процента</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+</head>
+<body>
+<form action="" method="post">
+    <label>Начальный вклад</label>
+    <div class="text-field_icon text-field_iconDeposit" >
+        <input class="text-field_input" type="text" name="deposit" placeholder="Сумма вклада">
+    </div>
+    <label>Процентная ставка</label>
+    <div class="text-field_icon text-field_iconRate" >
+        <input class="text-field_input" type="text" name="rate" placeholder="Процент">
+    </div>
+    <label>Срок вклада (в годах)</label>
+    <div class="text-field_icon text-field_iconTime" >
+        <input class="text-field_input" type="text" name="yeartime" placeholder="Кол-во лет">
+    </div>
+    <input type="submit">
+</form>
+<h1>{{ans}}</h1>
+</body>
+</html>

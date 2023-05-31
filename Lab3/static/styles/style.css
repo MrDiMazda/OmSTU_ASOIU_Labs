@@ -1,0 +1,86 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background: #FFF;
+    margin-bottom: 1rem;
+}
+
+form {
+    display: block;
+    margin-bottom: 0.25rem;
+}
+input {
+    font-family: 'Montserrat Regular';
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    color: #212529;
+    background-color: #FFF;
+    background-clip: padding-box;
+    border: 1px solid #BDBDBD;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+    display: block;
+    width: 25%;
+    height: calc(2.25rem + 2px);
+    padding: 0.375rem 0.375rem;
+}
+
+.text-field_icon {
+    position: relative;
+}
+
+.text-field_icon::before {
+    content: '';
+    color: #808080;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 40%;
+    bottom: 0;
+    left: 0.625rem;
+    transform: translateY(-50%);
+}
+
+.text-field_icon .text-field_input {
+    padding-left: 2rem;
+}
+
+.text-field_iconDeposit::before {
+    content: '₽';
+}
+
+.text-field_iconRate::before {
+    content: '%';
+}
+
+.text-field_iconTime::before {
+    width: 1rem;
+    background-image: url(clock.svg);
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+input[type="text"]::placeholder {
+    color: #212529;
+    opacity: 0.4;
+}
+input[type="text"]:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #bdbdbd;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
+}
+
+h1, label, div {
+    font-size: 16pt;
+    font-family: 'Montserrat Regular';
+    font-style: normal;
+    padding-bottom: 5pt;
+}
